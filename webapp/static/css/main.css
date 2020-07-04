@@ -1,6 +1,6 @@
 .wrapper, .jumbotron, .result {
     margin: auto;
-    width: 92%;
+    width: 90%;
 }
 
 header, form, .jumbotron, .result, .btn-primary {
@@ -24,12 +24,15 @@ header, form, .jumbotron, .result, .btn-primary {
     padding-top: 20px;
 }
 
-.wrapper > main {
+.wrapper > main, #checked {
     padding: 20px;
 }
 
-#checked {
-    padding: 20px;
+#result {
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(192, 192, 192, 0.685);
 }
 
 /* .lead > a, .display-4 > a, .card > p > a {
