@@ -8,10 +8,12 @@ header, form, .jumbotron, .result, .btn-primary {
 }
 
 .wrapper {
+    border-radius: 4px;
     box-shadow: 0px 0px 10px 0px rgba(192, 192, 192, 0.685);
 }
 
 .jumbotron {
+    border-radius: 4px;
     background-color: #ffffff;
     margin-bottom: 0px;
     box-shadow: 0px 0px 10px 0px rgba(192, 192, 192, 0.685);

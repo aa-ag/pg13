@@ -46,6 +46,18 @@
 
 	</div>
 
+	<br>
+
+	<div class="wrapper">
+		<div id="checked"></div>
+	</div>
+
+	<br>
+
+	<div class="wrapper">
+		<div id="censoredText"></div>
+	</div>
+
 {% endblock content %}
 
 {% block script %}
@@ -57,10 +69,8 @@
 			
 			let entry = {
 				input: input.value
-			};
-
-			console.log(entry)
-
+			}
+			
 			fetch(`${window.origin}/result`, {
 				method: "POST",
 				credentials: "include",
@@ -70,7 +80,20 @@
 					"content-type": "application/json"
 				})
 			})
+			.then(function (response) {
 
+				if (response.status !== 200) {
+					console.log(`Response: ${response.status}`);
+					return ;
+				}
+
+				response.json().then(function (res) {
+					// console.log(data)
+					document.getElementById("checked").innerHTML = `${res}`
+					// document.getElementById("censoredText").innerHTML = `${res2}`
+				})
+
+			})
         }
 
     </script>

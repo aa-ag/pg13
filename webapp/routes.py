@@ -17,6 +17,23 @@ def result():
 
     print(req)
 
-    res = make_response(jsonify({"message": "received"}), 200)
+    as_string = req['input']
+
+    checked = profanity.contains_profanity(as_string)
+
+    print(checked)
+
+    res = make_response(jsonify(checked), 200)
+
+    censored = profanity.censor(as_string, '*')
+
+    print(censored)
+
+    res2 = make_response(jsonify(censored), 200)
+
+    # custom = []
+    # profanity.add_censor_words(custom)
 
     return res
+    # return res2
+    return render_template("home.html")
