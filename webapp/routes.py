@@ -12,4 +12,11 @@ def home():
 
 @app.route('/result', methods=["POST"])
 def result():
-    return render_template("result.html")
+
+    req = request.get_json()
+
+    print(req)
+
+    res = make_response(jsonify({"message": "received"}), 200)
+
+    return res
