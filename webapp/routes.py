@@ -23,17 +23,14 @@ def result():
 
     print(checked)
 
-    res = make_response(jsonify(checked), 200)
-
-    censored = profanity.censor(as_string, '*')
+    censored = profanity.censor(as_string, '🙉')
 
     print(censored)
 
-    res2 = make_response(jsonify(censored), 200)
+    res = make_response(jsonify(f'Contains profanity? {checked}. Here: "{censored}"'), 200)
 
     # custom = []
     # profanity.add_censor_words(custom)
 
-    return res
-    # return res2
+    return res 
     return render_template("home.html")

@@ -28,6 +28,10 @@ header, form, .jumbotron, .result, .btn-primary {
     padding: 20px;
 }
 
+#checked {
+    padding: 20px;
+}
+
 /* .lead > a, .display-4 > a, .card > p > a {
     font-weight: lighter;
 } */
