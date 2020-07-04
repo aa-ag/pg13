@@ -1,0 +1,40 @@
+.wrapper, .jumbotron, .result {
+    margin: auto;
+    width: 92%;
+}
+
+header, form, .jumbotron, .result, .btn-primary {
+    margin-top: 3vh;
+}
+
+.wrapper {
+    box-shadow: 0px 0px 10px 0px rgba(192, 192, 192, 0.685);
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(192, 192, 192, 0.685);
+}
+
+.wrapper > header {
+    margin: 20px 20px -13px 20px;
+    padding-top: 20px;
+}
+
+.wrapper > main {
+    padding: 20px;
+}
+
+/* .lead > a, .display-4 > a, .card > p > a {
+    font-weight: lighter;
+} */
+
+#textarea:focus {
+    border: 0.5px solid rgba(192, 192, 192, 0.708);
+    box-shadow: 0px 0px 0px 2px rgba(211, 139, 46, 0.653);
+}
+
+#contact {
+    padding-bottom: 2px;
+}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+	<div class="wrapper">
+
+		<header>
+
+			<p>
+				<button class="btn btn-secondary" id="instructions" type="button" data-toggle="collapse" data-target="#collapseInstructions" aria-expanded="false" aria-controls="collapseInstructions">
+					Instructions
+				</button>
+			</p>
+
+			<div class="collapse" id="collapseInstructions">
+				<div class="card card-body">
+					Enter your text and the program tells you if it contains profanity.
+					<small id="helperText" class="form-text text-muted">
+					What is considered profanity? See full list <a href="https://github.com/snguyenthanh/better_profanity/blob/master/better_profanity/profanity_wordlist.txt" target="_blank" rel="noopener noreferrer">here</a>.
+					</small>
+				</div>
+			</div>
+
+		</header>
+
+		<main>
+
+			<div class="form-group">
+				<textarea type="text" class="form-control" id="textarea" rows="6" placeholder="Enter your text to check if it contains profanity."></textarea>
+			</div>
+			
+			<!-- <div class="form-group">
+				<label for="form-control-label">Example file input</label>
+				<input type="file" class="form-control-file" id="form-control-input">
+			</div> -->
+
+			<small id="helperText" class="form-text text-muted">
+				Only available in English, for now. Tap/click "Check" when ready!
+			</small>
+			
+			<button type="submit" class="btn btn-primary" onclick="check_input();">Check</button>
+
+		</main>
+
+	</div>
+
+{% endblock content %}
+
+{% block script %}
+
+    <script>
+
+        function check_input() {
+			let input = document.getElementById("textarea");
+			
+			let entry = {
+				input: input.value
+			};
+
+			console.log(entry)
+
+        }
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+	  
+			<p class="display-4">This project leverages <a href="https://pypi.org/project/better-profanity/" target="_blank" rel="noopener noreferrer">better-profanity</a>.</p>
+			<p class="lead">A library containing 300+ sensitive words that continues to be <a href="https://libraries.io/pypi/better-profanity" target="_blank" rel="noopener noreferrer">updated</a>.</p>
+
+			<p>
+			<button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
+				Contact
+			</button>
+			</p>
+		
+			<div class="collapse" id="collapseContact">
+			<div class="card card-body" id="contact">
+				<p>🙉 Feel free to reach out via <a href="https://www.linkedin.com/in/aa-ag/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+			</div>
+			</div>
+	
+  		</div>
+	</div>
+
+{% endblock content %}
