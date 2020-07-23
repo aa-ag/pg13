@@ -29,7 +29,7 @@ def result():
 
     # print(censored)
 
-    res = make_response(jsonify(f'Contains profanity? {checked}. Profanity count: {count}. Here: "{censored}"'), 200)
+    res = make_response(jsonify(f'Contains profanity? {checked}. Profanity count: {count}. Censored version: "{censored}"'), 200)
 
     # custom = []
     # profanity.add_censor_words(custom)
