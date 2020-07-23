@@ -15,19 +15,21 @@ def result():
 
     req = request.get_json()
 
-    print(req)
+    # print(req)
 
     as_string = req['input']
 
-    checked = profanity.contains_profanity(as_string)
+    checked = "Yes" if profanity.contains_profanity(as_string) == True else "No"
     
-    print(checked)
+    # print(checked)
 
     censored = profanity.censor(as_string, '🙉')
 
-    print(censored)
+    count = censored.count('🙉')
 
-    res = make_response(jsonify(f'Contains profanity? {checked}. Here: "{censored}"'), 200)
+    # print(censored)
+
+    res = make_response(jsonify(f'Contains profanity? {checked}. Profanity count: {count}. Here: "{censored}"'), 200)
 
     # custom = []
     # profanity.add_censor_words(custom)
