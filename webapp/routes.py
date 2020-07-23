@@ -25,7 +25,7 @@ def result():
 
     censored = profanity.censor(as_string, '🙉')
 
-    count = censored.count('🙉')
+    count = censored.count('🙉🙉🙉🙉')
 
     # print(censored)
 
