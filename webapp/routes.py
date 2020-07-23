@@ -20,7 +20,7 @@ def result():
     as_string = req['input']
 
     checked = profanity.contains_profanity(as_string)
-
+    
     print(checked)
 
     censored = profanity.censor(as_string, '🙉')
